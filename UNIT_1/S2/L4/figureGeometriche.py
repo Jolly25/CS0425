@@ -18,7 +18,11 @@ print("1 - Quadrato")
 print("2 - Cerchio")
 print("3 - Rettangolo")
 
-scelta = input("Scegli una figura (1/2/3): ")
+scelta = input("Scegli una figura (1/2/3): ").lower
+
+while scelta not in ['quadrato', 'cerchio', 'rettangolo']:
+    print("Per favore insiersci una forma geometrica tra quelle proposte: ")
+    scelta = input("Scegli una figura (1/2/3): ").lower
 
 if scelta == "1":
     risultato = perimetro_quadrato()
