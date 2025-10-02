@@ -2,7 +2,7 @@ import math
 
 def perimetro_quadrato():
     lato = float(input("Inserisci la lunghezza del lato del quadrato: "))
-    return lato*4
+    return lato * 4
 
 def circonferenza_cerchio():
     raggio = float(input("Inserisci il raggio del cerchio: "))
@@ -14,24 +14,22 @@ def perimetro_rettangolo():
     return 2 * base + 2 * altezza
 
 print("Calcolo perimetro figure geometriche")
-print("1 - Quadrato")
-print("2 - Cerchio")
-print("3 - Rettangolo")
+print("Quadrato")
+print("Cerchio")
+print("Rettangolo")
 
-scelta = input("Scegli una figura (1/2/3): ").lower
+scelta = input("Scegli una figura: ").lower()
 
 while scelta not in ['quadrato', 'cerchio', 'rettangolo']:
-    print("Per favore insiersci una forma geometrica tra quelle proposte: ")
-    scelta = input("Scegli una figura (1/2/3): ").lower
+    print("Per favore inserisci una forma geometrica tra quelle proposte: ")
+    scelta = input("Scegli una figura: ").lower()
 
-if scelta == "1":
+if scelta == "quadrato":
     risultato = perimetro_quadrato()
     print(f"Il perimetro del quadrato è: {risultato}")
-elif scelta == "2":
+elif scelta == "cerchio":
     risultato = circonferenza_cerchio()
     print(f"La circonferenza del cerchio è: {risultato}")
-elif scelta == "3":
+elif scelta == "rettangolo":
     risultato = perimetro_rettangolo()
     print(f"Il perimetro del rettangolo è: {risultato}")
-else:
-    print("Scelta non valida.")
